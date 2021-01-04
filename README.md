@@ -1,1 +1,1 @@
-# rl-scrims 30000
+# rl-scrims 1
