@@ -1,7 +1,6 @@
-# front
+# Front-end
 
 ## [Live project ](https://rlscrims.herokuapp.com/)
-
 
 ## Project setup
 ```
