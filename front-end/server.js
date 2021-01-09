@@ -15,3 +15,17 @@ app.get(/.*/, function (req, res) {
 const port = process.env.PORT || 8080
 app.listen(port)
 console.log(`app is listening on port: ${port}`)
+  // "eslintConfig": {
+  //   "root": true,
+  //   "env": {
+  //     "node": true
+  //   },
+  //   "extends": [
+  //     "plugin:vue/essential",
+  //     "eslint:recommended"
+  //   ],
+  //   "parserOptions": {
+  //     "parser": "babel-eslint"
+  //   },
+  //   "rules": {}
+  // },
