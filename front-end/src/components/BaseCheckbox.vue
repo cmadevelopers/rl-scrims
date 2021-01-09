@@ -53,6 +53,7 @@ export default {
         this.$emit("input", check);
       }
     },
+    // eslint-disable-next-line vue/return-in-computed-property
     inlineClass() {
       if (this.inline) {
         return `form-check-inline`;
