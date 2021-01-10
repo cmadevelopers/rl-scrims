@@ -1,4 +1,4 @@
-# Rl-scrims
+# RL-scrims
 
 Foobar is a Python library for dealing with word pluralization.
 
