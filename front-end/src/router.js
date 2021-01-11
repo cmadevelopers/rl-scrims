@@ -11,6 +11,7 @@ import Profile from "./views/Profile.vue";
 Vue.use(Router);
 
 export default new Router({
+  mode: 'history',
   linkExactActiveClass: "active",
   routes: [
     {
@@ -57,7 +58,10 @@ export default new Router({
         default: Profile,
         footer: AppFooter
       }
-    }
+    },
+    {
+      path: '*', redirect: '/',
+    },
   ],
   scrollBehavior: to => {
     if (to.hash) {

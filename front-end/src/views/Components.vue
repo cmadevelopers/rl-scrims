@@ -1,6 +1,7 @@
 <template>
     <div>
         <hero></hero>
+        <organization-list></organization-list>
         <basic-elements></basic-elements>
         <inputs></inputs>
         <custom-controls></custom-controls>
@@ -23,11 +24,13 @@ import Carousel from "./components/Carousel";
 import Icons from "./components/Icons";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
+import OrganizationList from "./components/OrganizationList";
 
 export default {
   name: "components",
   components: {
     Hero,
+    OrganizationList,
     BasicElements,
     Inputs,
     CustomControls,
@@ -40,3 +43,5 @@ export default {
   }
 };
 </script>
+
+    OrganizationList
