@@ -21,13 +21,20 @@
                 <h6 class="text-primary text-uppercase">
                   {{ organization.name }}
                 </h6>
-                <p class="description mt-3">{{ organization.description }}</p>
-                <p class="description mt-2">Created: {{ organization.created_at }}</p>
-                <p class="description mt-2">Updated: {{ organization.updated_at }}</p>
+                <div class="text-secondary">
+                  <p class="description mt-3">{{ organization.description }}</p>
+                  <p class="description mt-2">
+                    Created: {{ organization.created_at }}
+                  </p>
+                  <p class="description mt-2">
+                    Updated: {{ organization.updated_at }}
+                  </p>
+                </div>
+
                 <div>
-                  <badge type="primary" rounded>design</badge>
-                  <badge type="primary" rounded>system</badge>
-                  <badge type="primary" rounded>creative</badge>
+                  <badge type="secondary" rounded>design</badge>
+                  <badge type="secondary" rounded>system</badge>
+                  <badge type="secondary" rounded>creative</badge>
                 </div>
               </card>
             </div>

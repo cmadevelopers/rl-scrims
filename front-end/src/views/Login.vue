@@ -1,5 +1,5 @@
 <template>
-  <section class="section section-shaped section-lg my-0">
+  <section class="   section-shaped section-lg my-0">
     <div class="shape shape-style-1 bg-gradient-default">
       <span></span>
       <span></span>
@@ -14,13 +14,14 @@
       <div class="row justify-content-center">
         <div class="col-lg-5">
           <card
-            type="secondary"
             shadow
-            header-classes="bg-white pb-5"
             body-classes="px-lg-5 py-lg-5"
             class="border-0"
           >
             <template>
+              <div class="text-muted text-center">
+                <Alert ref="Alert"></Alert>
+              </div>
               <div class="text-muted text-center mb-3">
                 <small>Logar com</small>
               </div>
@@ -58,10 +59,10 @@
                   v-model="userData.password"
                 >
                 </base-input>
-                <base-checkbox> Remember me </base-checkbox>
+                <base-checkbox  class="text-muted"> Remember me </base-checkbox>
                 <div class="text-center">
                   <base-button type="primary" class="my-4" @click="login()"
-                    >Sign In</base-button
+                    >Entrar</base-button
                   >
                 </div>
               </form>
@@ -87,8 +88,12 @@
 <script>
 import Endpoints from "../services/endpoints";
 import Request from "../services/request-entity";
+import Alert from "../components/Alert";
 
 export default {
+  components: {
+    Alert,
+  },
   data: () => ({
     showPassword: false,
     userData: {
@@ -98,12 +103,14 @@ export default {
     rules: {},
   }),
   methods: {
+    showMsg: function (text, color, timeout = 3) {
+      this.$refs.Alert.showMsg(text, color, timeout);
+    },
     login() {
       Request.login(Endpoints.endpoints.login, this.userData)
         .then((response) => {
           if (response.status === 400) {
-            // this.showMsg("Falha ao logar, dados incorretos!", "error", 3000);
-            alert("Falha ao logar, dados incorretos!");
+            this.showMsg("Falha ao logar, dados incorretos!", "error", 3);
           } else {
             if ("access_token" in response.data) {
               // iniciando a sessão
@@ -112,7 +119,7 @@ export default {
               // console.log(response.data.accessToken);
 
               // armazenando o token no armazenamento local
-              sessionStorage.setItem("userToken", response.data.access_token);
+              sessionStorage.setItem(process.env.VUE_APP_AUTH_TOKEN_KEY, response.data.access_token);
 
               //redirecionamento pro meu principal
               this.$router.push("/");
@@ -122,9 +129,7 @@ export default {
           }
         })
         .catch((err) => {
-          //   this.showMsg("Erro ao Logar! Dados incorretos", "error", 3000);
-          console.log(err);
-          alert("Falha ao logar, dados incorretos!");
+          this.showMsg("Erro ao Logar! Dados incorretos", "error", 3);
         });
     },
   },

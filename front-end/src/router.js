@@ -72,6 +72,18 @@ let router = new Router({
         requiresAuth: true
       }
     },
+    // {
+    //   path: "/logout",
+    //   name: "logout",
+    //   components: {
+    //     header: AppHeader,
+    //     default: Logout,
+    //     footer: AppFooter
+    //   },
+    //   meta: {
+    //     requiresAuth: true
+    //   }
+    // },
     {
       path: '*', redirect: '/',
     },
