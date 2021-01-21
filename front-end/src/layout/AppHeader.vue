@@ -145,7 +145,7 @@
             <span class="nav-link-inner--text d-lg-none">Github</span>
           </a>
         </li>
-        <li class="nav-item d-none d-lg-block ml-lg-4">
+        <li v-if="!isLogged()" class="nav-item d-none d-lg-block ml-lg-4">
           <router-link to="/login" 
             rel="noopener"
             class="btn btn-neutral btn-icon"

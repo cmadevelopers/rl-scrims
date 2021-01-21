@@ -107,7 +107,7 @@ router.beforeEach((to, from, next) => {
       })
     } else {
       // let user = JSON.parse(sessionStorage.getItem('user'))
-      let user ={
+      let user = {
         is_admin: 0,
       }
       if (to.matched.some(record => record.meta.is_admin)) {
