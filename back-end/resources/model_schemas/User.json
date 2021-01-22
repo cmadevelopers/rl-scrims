@@ -1,0 +1,230 @@
+[
+    {
+        "name": "id",
+        "dbType": "integer,true,true",
+        "htmlType": null,
+        "validations": null,
+        "searchable": false,
+        "fillable": false,
+        "primary": true,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "rl_rank_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "nullable|integer|nullable|integer|nullable|integer",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "team_id",
+        "dbType": "integer,false,true",
+        "htmlType": null,
+        "validations": "nullable|integer|nullable|integer|nullable|integer",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "password",
+        "dbType": "string,60",
+        "htmlType": "text",
+        "validations": "required|string|max:60|string|max:60|string|max:60",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "email",
+        "dbType": "string,255",
+        "htmlType": "text",
+        "validations": "required|string|max:255|string|max:255|string|max:255",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "name",
+        "dbType": "string,50",
+        "htmlType": "text",
+        "validations": "required|string|max:50|string|max:50|string|max:50",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "username",
+        "dbType": "string,25",
+        "htmlType": "text",
+        "validations": "required|string|max:25|string|max:25|string|max:25",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "steamid",
+        "dbType": "string,17:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|max:17|nullable|string|max:17|nullable|string|max:17",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "nick",
+        "dbType": "string,25:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|max:25|nullable|string|max:25|nullable|string|max:25",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "platform",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|nullable|string|nullable|string",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "rank_status",
+        "dbType": "string:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|nullable|string|nullable|string",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "bio",
+        "dbType": "string,255:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|max:255|nullable|string|max:255|nullable|string|max:255",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "picture",
+        "dbType": "string,1024:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|max:1024|nullable|string|max:1024|nullable|string|max:1024",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "cover",
+        "dbType": "string,1024:nullable",
+        "htmlType": "text",
+        "validations": "nullable|string|max:1024|nullable|string|max:1024|nullable|string|max:1024",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "email_verified_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": "nullable|nullable|nullable",
+        "searchable": true,
+        "fillable": true,
+        "primary": false,
+        "inForm": true,
+        "inIndex": true,
+        "inView": true
+    },
+    {
+        "name": "created_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": "nullable|nullable|nullable",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "name": "updated_at",
+        "dbType": "datetime:nullable",
+        "htmlType": "date",
+        "validations": "nullable|nullable|nullable",
+        "searchable": false,
+        "fillable": false,
+        "primary": false,
+        "inForm": false,
+        "inIndex": false,
+        "inView": false
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,RlRank,rl_rank_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mt1,Team,team_id"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Contact,contact_has_user"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Organization,organization_has_user"
+    },
+    {
+        "type": "relation",
+        "relation": "1tm,Team,owner"
+    },
+    {
+        "type": "relation",
+        "relation": "mtm,Achievement,user_has_achievement"
+    }
+]
