@@ -1,17 +1,18 @@
 <template>
-    <div>
-        <hero></hero>
-        <organization-list></organization-list>
-        <basic-elements></basic-elements>
-        <inputs></inputs>
-        <custom-controls></custom-controls>
-        <navigation></navigation>
-        <javascript-components></javascript-components>
-        <icons></icons>
-        <examples></examples>
-        <download-section></download-section>
-        <carousel></carousel>
-    </div>
+  <div>
+    <hero></hero>
+    <user-list></user-list>
+    <organization-list></organization-list>
+    <basic-elements></basic-elements>
+    <inputs></inputs>
+    <custom-controls></custom-controls>
+    <navigation></navigation>
+    <javascript-components></javascript-components>
+    <icons></icons>
+    <examples></examples>
+    <download-section></download-section>
+    <carousel></carousel>
+  </div>
 </template>
 <script>
 import Hero from "./components/Hero";
@@ -25,11 +26,13 @@ import Icons from "./components/Icons";
 import Examples from "./components/Examples";
 import DownloadSection from "./components/DownloadSection";
 import OrganizationList from "./components/OrganizationList";
+import UserList from "./components/UserList.vue";
 
 export default {
   name: "components",
   components: {
     Hero,
+    UserList,
     OrganizationList,
     BasicElements,
     Inputs,
@@ -39,9 +42,7 @@ export default {
     Carousel,
     Icons,
     Examples,
-    DownloadSection
-  }
+    DownloadSection,
+  },
 };
 </script>
-
-    OrganizationList

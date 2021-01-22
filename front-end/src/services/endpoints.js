@@ -1,6 +1,7 @@
-export default{
-    endpoints : {
-        'organizations': "organizations",
-        'login' : "auth/login",
+export default {
+    endpoints: {
+        'organizations': 'organizations',
+        'login': 'auth/login',
+        'users': 'users'
     }
 }
