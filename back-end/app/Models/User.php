@@ -6,6 +6,7 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Tymon\JWTAuth\Contracts\JWTSubject;
+use Illuminate\Notifications\Notifiable;
 
 /**
  * @SWG\Definition(
@@ -105,7 +106,7 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
  * )
  */
 class User extends \Illuminate\Foundation\Auth\User implements JWTSubject
-{
+{ //\Illuminate\Foundation\Auth\User
 
     use HasFactory;
 
@@ -230,13 +231,23 @@ class User extends \Illuminate\Foundation\Auth\User implements JWTSubject
             'user_has_achievement');
     }
 
+    /**
+     * Get the identifier that will be stored in the subject claim of the JWT.
+     *
+     * @return mixed
+     */
     public function getJWTIdentifier()
     {
-        // TODO: Implement getJWTIdentifier() method.
+        return $this->getKey();
     }
 
+    /**
+     * Return a key value array, containing any custom claims to be added to the JWT.
+     *
+     * @return array
+     */
     public function getJWTCustomClaims()
     {
-        // TODO: Implement getJWTCustomClaims() method.
+        return [];
     }
 }

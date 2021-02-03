@@ -37,7 +37,12 @@
                             "type": "object"
                         }
                     }
-                }
+                },
+                "security": [
+                    {
+                        "InfyOmAuth": []
+                    }
+                ]
             },
             "post": {
                 "tags": [
@@ -290,6 +295,14 @@
                     "format": "date-time"
                 }
             }
+        }
+    },
+    "securityDefinitions": {
+        "InfyOmAuth": {
+            "type": "apiKey",
+            "description": "Auth Bearer Token\n *     Format as 'Bearer <access_token>'",
+            "name": "Authorization",
+            "in": "header"
         }
     }
 }

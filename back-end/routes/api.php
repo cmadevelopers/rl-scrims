@@ -1,6 +1,7 @@
 <?php
 
-use Illuminate\Http\Request;
+use App\Http\Controllers\API\UserAPIController;
+use App\Http\Controllers\API;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,5 +19,19 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
+Route::group([
+    'middleware' => 'api',
+    'prefix'     => 'auth',
+    'namespace'  => 'App\\Http\\Controllers\\API'
+], function ($router) {
+    Route::post('login', 'AuthController@login');
+    Route::post('logout', 'AuthController@logout');
+    Route::post('refresh', 'AuthController@refresh');
+    Route::post('me', 'AuthController@me');
+});
 
-Route::resource('users', App\Http\Controllers\API\UserAPIController::class);
+Route::resource('users', UserAPIController::class)->middleware('api.jwt');
+
+Route::fallback(function () {
+    return response()->json(['error' => 'Não encontrado!'], 404);
+});

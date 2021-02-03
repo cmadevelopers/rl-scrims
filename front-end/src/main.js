@@ -10,9 +10,11 @@ import './registerServiceWorker'
 Vue.use(BootstrapVue)
 Vue.use(BootstrapVueIcons)
 Vue.use(VueSession)
+Vue.use(Argon);
+
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false;
-Vue.use(Argon);
+
 new Vue({
   router,
   render: h => h(App)

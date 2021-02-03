@@ -33,6 +33,7 @@ class UserAPIController extends AppBaseController
      * @SWG\Get(
      *      path="/users",
      *      summary="Get a listing of the Users.",
+     *      security={{ "InfyOmAuth": {} }},
      *      tags={"User"},
      *      description="Get all Users",
      *      produces={"application/json"},

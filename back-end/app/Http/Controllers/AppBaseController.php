@@ -12,7 +12,17 @@ use Response;
  *     title="Laravel Generator APIs",
  *     version="1.0.0",
  *   )
- * )
+ * ),
+ * @SWG\SecurityScheme(
+ *     securityDefinition="InfyOmAuth",
+ *     type="apiKey",
+ *     in="header",
+ *     name="Authorization",
+ *     description="Auth Bearer Token
+ *     Format as 'Bearer <access_token>'",
+ *     )
+ *    )
+ *
  * This class should be parent class for other API controllers
  * Class AppBaseController
  */

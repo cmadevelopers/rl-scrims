@@ -28,7 +28,7 @@ let router = new Router({
       name: "landing",
       components: {
         header: AppHeader,
-        default: Landing,
+        default: () => import('./views/Landing.vue'),
         footer: AppFooter
       },
       meta: {

@@ -127,9 +127,9 @@
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/swagger-api/swagger-ui" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/infyomlabs/swagger-generator" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/laravel/ui" />
-      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/tymon/jwt-auth" />
-      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/namshi/jose" />
       <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/lcobucci/jwt" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/namshi/jose" />
+      <excludeFolder url="file://$MODULE_DIR$/back-end/vendor/tymon/jwt-auth" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
