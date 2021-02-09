@@ -20,11 +20,11 @@
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.12",
         "laravel/tinker": "^2.5",
-        "laravel/ui": "3.2",
         "laravelcollective/html": "^6.2",
         "tymon/jwt-auth": "1.0.x-dev"
     },
     "require-dev": {
+        "laravel/ui": "3.2",
         "infyomlabs/adminlte-templates": "^2.0",
         "infyomlabs/laravel-generator": "8.0.x-dev",
         "infyomlabs/swagger-generator": "dev-master",
@@ -41,7 +41,7 @@
         "preferred-install": "dist",
         "sort-packages": true,
         "github-oauth": {
-            "github.com": "ca49b2268fa3a8b0b856ace2de7b3026b870f08a"
+            "github.com": "f4a862e41ec1350b24a66d3709e461259f550aac"
         }
     },
     "extra": {
